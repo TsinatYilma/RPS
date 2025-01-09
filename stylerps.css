@@ -9,16 +9,17 @@ body{
     
 }
 button{
-    background-color: #007A61;
+    background-color: #04997e;
     width: 110px;
     height: 50px;
     border: none;
     border-radius: 18px;
 
     margin: 30px;
-    
 }
-
+button:hover{
+    transform: scale(1.2);
+}
 .score{
     display: flex;
     justify-content: space-around;

@@ -76,6 +76,8 @@
         }
             let playerscore = 0;
             let computerscore = 0;
+            let round = 0;
+            let totalRounds = 10;
             function updatescore(){
                 document.getElementById('playerscore').innerText = playerscore;
                 document.getElementById('computerscore').innerText = computerscore;
@@ -94,8 +96,27 @@
                  
                  console.log(winner);
                  updateImages(personchoice, computerchoice);
-                 updatescore();   
+                 updatescore();
+                 round++;   
+                 if (round >= totalRounds) { 
+            let finalMessage = ""; 
+            if (playerscore > computerscore) { 
+                finalMessage = "Congratulations! You are the overall winner!"; 
+            } 
+            else if (playerscore < computerscore) { 
+                finalMessage = "Oh no! The computer is the overall winner!"; 
+            } 
+            else { 
+                finalMessage = "It's a draw overall!"; 
+            } 
+            alert(finalMessage); 
+            playerscore = 0; 
+            computerscore = 0; 
+            round = 0; 
+            updatescore(); 
         }
+        }
+        
         
     </script>
     
